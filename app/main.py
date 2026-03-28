@@ -4,8 +4,17 @@ from app.api.routes.upload import router as upload_router
 from app.api.routes.query import router as query_router
 from app.api.routes.profile import router as profile_router
 from app.api.routes.ai import router as ai_router
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="AI Data Copilot")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(upload_router, prefix="/datasets")
 app.include_router(query_router, prefix="/query")
