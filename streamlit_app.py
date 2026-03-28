@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import requests
 
-API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
+API_URL = os.getenv("API_URL", "https://ai-data-copilot-api.onrender.com")
 
 st.set_page_config(page_title="AI Data Copilot", page_icon="🤖", layout="centered")
 
@@ -30,9 +30,11 @@ if st.button("Ask AI"):
 
                 if response.status_code == 200:
                     data = response.json()
+
                     st.success("AI response generated")
                     st.markdown("### Answer")
                     st.write(data.get("answer", "No answer found"))
+
                     st.markdown("### Source")
                     st.info(data.get("source", "N/A"))
                 else:
