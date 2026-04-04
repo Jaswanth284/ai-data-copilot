@@ -1,0 +1,7 @@
+[
+  "Row 1: customer_id: 1 | name: Alice | region: North | revenue: 10000",
+  "Row 2: customer_id: 2 | name: Bob | region: South | revenue: 8000",
+  "Row 3: customer_id: 3 | name: Charlie | region: East | revenue: 12000",
+  "Row 4: customer_id: 4 | name: David | region: West | revenue: 7000",
+  "Row 5: customer_id: 5 | name: Emma | region: North | revenue: 15000"
+]
